@@ -67,7 +67,7 @@ for product in products:
 order_query = select(Order)
 orders = session.execute(order_query).scalars().all()
 for order in orders:
-    print(f"Order ID: {order.id}, User ID: {order.user_id}, Product ID: {order.product_id}, Quantity: {order.quantity}")
+    print(f"User: {order.user.name}, Product: {order.product.name}, Quantity: {order.quantity}")
     
 update_product_query = select(Product).where(Product.id == 1)
 update_product = session.execute(update_product_query).scalars().first()
