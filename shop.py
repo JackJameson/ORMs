@@ -37,8 +37,11 @@ Base.metadata.create_all(engine)
 
 session = Session(engine)
 
-new_user1 = User(name="John Doe", email="JohnDoe@email.com")
-new_user2 = User(name="Jane Doe", email="JaneDoe@email.com")
+# new_user1 = User(name="John Doe", email="JohnDoe@email.com")
+# new_user2 = User(name="Jane Doe", email="JaneDoe@email.com")
 
+new_product1 = Product(name="Laptop", price=1000)
+new_product2 = Product(name="Smartphone", price=500)
+new_product3 = Product(name="Tablet", price=300)
 
 session.commit()
