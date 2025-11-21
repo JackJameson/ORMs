@@ -36,3 +36,9 @@ class Order(Base):
 Base.metadata.create_all(engine)
 
 session = Session(engine)
+
+new_user1 = User(name="John Doe", email="JohnDoe@email.com")
+new_user2 = User(name="Jane Doe", email="JaneDoe@email.com")
+
+
+session.commit()
