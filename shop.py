@@ -73,6 +73,14 @@ update_product_query = select(Product).where(Product.id == 1)
 update_product = session.execute(update_product_query).scalars().first()
 update_product.price = 900
 
+
+# new_user3 = User(name="Delete me", email="DeleteMe@email.com")
+# session.add(new_user3)
+# session.commit()
+# query = select(User).where(User.id == 3)
+# user = session.execute(query).scalars().first()
+# session.delete(user)
+
 session.commit()
     
 session.close()
